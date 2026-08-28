@@ -1,9 +1,34 @@
 ---
 import CommonSectionWrapper from "./CommonSectionWrapper.astro";
+import FAQAccordion from "./FAQAccordion.tsx";
 ---
 
-<CommonSectionWrapper id="faq" class="">
-  <div class="flex w-full items-center justify-center">
-    <h2 class="text-5xl">Seção FAQ</h2>
+<CommonSectionWrapper id="faq" class="relative bg-[#f5eeea]">
+  <div
+    class="relative mx-auto flex max-w-2xl flex-col items-center gap-4 text-center"
+  >
+    <span class="text-sm font-medium uppercase tracking-[0.2em] text-[#B79A82]">
+      Dúvidas frequentes
+    </span>
+    <h2 class="text-4xl leading-tight text-[#43261F] md:text-5xl">
+      Perguntas que chegam antes da primeira consulta
+    </h2>
+    <p class="max-w-xl text-lg text-[#43261F]/70">
+      Se a sua dúvida não estiver aqui, chama no WhatsApp, a resposta é rápida.
+    </p>
   </div>
+
+  <FAQAccordion client:visible />
+
+  <p class="mt-8 text-center text-sm text-[#43261F]/60">
+    Ainda com dúvida?{" "}
+    <a
+      href="https://api.whatsapp.com/send?l=pt&phone=5519997404882"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="font-medium text-[#5A2028] underline underline-offset-4 hover:text-[#43261F]"
+    >
+      Fale direto no WhatsApp
+    </a>.
+  </p>
 </CommonSectionWrapper>

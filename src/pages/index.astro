@@ -7,14 +7,15 @@ import CTA from "../components/CTA.astro";
 import AboutUs from "../components/AboutUs.astro";
 import FAQ from "../components/FAQ.astro";
 import Footer from "../components/Footer.astro";
+import ContactSection from "../components/ContactSection.astro";
 import NavMenu from "../components/NavMenu.tsx";
 ---
 
 <Layout
-  title="Boilerplate"
+  title="Dra Luciana Lopes"
   description="Uma landing page de exemplo para demonstração."
 >
-  <NavMenu client:load />
+  <!-- <NavMenu client:load /> -->
 
   <Hero />
   <Problems />
@@ -22,5 +23,6 @@ import NavMenu from "../components/NavMenu.tsx";
   <CTA />
   <AboutUs />
   <FAQ />
+  <ContactSection />
   <Footer />
 </Layout>

@@ -1,9 +1,42 @@
 ---
 import CommonSectionWrapper from "./CommonSectionWrapper.astro";
+import CTAButton from "./Ctabutton.tsx";
 ---
 
-<CommonSectionWrapper class="bg-amber-200">
-  <div class="flex w-full items-center justify-center">
-    <h2 class="text-5xl">Seção de CTA</h2>
+<CommonSectionWrapper id="agende" class="relative overflow-hidden bg-[#5A2028]">
+  <div
+    class="pointer-events-none absolute -bottom-32 -right-20 h-95 w-95 rounded-full bg-[#43261F] opacity-40 blur-3xl"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute -left-16 -top-24 h-75 w-75 rounded-full bg-[#B79A82] opacity-20 blur-3xl"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div
+    class="relative mx-auto flex max-w-2xl flex-col items-center gap-6 text-center"
+  >
+    <span class="text-sm font-medium uppercase tracking-[0.2em] text-[#E4D0C5]">
+      O próximo passo é seu
+    </span>
+
+    <h2 class="text-4xl leading-tight text-[#f5eeea] md:text-5xl">
+      Sua próxima consulta pode ser o início de um resultado que finalmente
+      dura.
+    </h2>
+
+    <p class="max-w-xl text-lg text-[#E4D0C5]">
+      Fale agora com a Dra. Luciana Tavares e marque sua avaliação inicial.
+    </p>
+
+    <div class="mt-2">
+      <CTAButton client:visible />
+    </div>
+
+    <span class="mt-2 text-xs uppercase tracking-[0.15em] text-[#E4D0C5]/60">
+      CRN-3/SP 23457 · Atendimento em Piracicaba/SP e online
+    </span>
   </div>
 </CommonSectionWrapper>

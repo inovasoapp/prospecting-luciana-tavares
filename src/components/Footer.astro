@@ -2,61 +2,95 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<footer class="pb-8 pt-16 border-t border-slate-200 bg-slate-50 text-slate-400">
-  <!-- Bloco Principal: Logo, Links e Contatos -->
+<footer class="bg-[#43261F] pb-8 text-[#E4D0C5] mt-20">
+  <!-- Barra de CTA final — continuação leve da seção de CTA, não uma seção nova -->
+  <div class="w-full bg-[#5A2028] py-8">
+    <div
+      class="section-wrapper flex flex-col items-center justify-center gap-5 text-center md:flex-row md:text-left"
+    >
+      <p class="text-lg font-medium text-[#f5eeea] md:text-xl">
+        Pronta pra dar o primeiro passo? {" "}
+        <span class="text-[#E4D0C5]">Vamos conversar agora.</span>
+      </p>
+      <a
+        href="https://api.whatsapp.com/send?l=pt&phone=5519997404882"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#f5eeea] px-6 py-3 text-sm font-semibold text-[#43261F] transition-colors hover:bg-[#E4D0C5]"
+      >
+        <Icon name="ph:whatsapp-logo" class="h-5 w-5" />
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Bloco Principal: Logo, Navegação e Contatos -->
   <div
-    class="section-wrapper flex flex-col gap-10 lg:flex-row lg:justify-between lg:items-start pb-12"
+    class="section-wrapper flex flex-col gap-10 pb-12 pt-16 lg:flex-row lg:items-start lg:justify-between mt-16"
   >
     <!-- Coluna 1: Branding -->
-    <div class="space-y-4 max-w-sm">
+    <div class="max-w-sm">
       <img
-        src="/logo.webp"
-        alt="Logo"
-        class="w-28 lg:w-36 brightness-100 contrast-100"
+        src="/logo-light.svg"
+        alt="Logo Dra. Luciana Tavares"
+        class="w-24 opacity-30"
       />
-      <p class="text-sm text-slate-500 font-light leading-relaxed">
-        Criando soluções digitais inovadoras para escalar o seu negócio no
-        ecossistema digital.
+
+      <p class="text-sm font-light leading-relaxed text-[#E4D0C5]/80 mt-4">
+        Dra. Luciana Lopes Tavares -
+        <span class="text-[#E4D0C5]/60">CRN-3/SP 23457</span>
+      </p>
+      <p class="text-sm font-light leading-relaxed text-[#E4D0C5]/80">
+        Nutricionista clínica, esportiva e fitoterapeuta.
       </p>
     </div>
 
-    <!-- Coluna 2: Navegação Suave (Links internos com âncora) -->
+    <!-- Coluna 2: Navegação -->
     <div class="space-y-4">
-      <h4 class="text-lg font-semibold uppercase tracking-wider text-slate-500">
+      <h4
+        class="text-sm font-semibold uppercase tracking-[0.15em] text-[#B79A82]"
+      >
         Navegação
       </h4>
-      <ul class="grid grid-cols-2 gap-x-8 gap-y-2.5 text-sm font-light">
+      <ul class="grid grid-cols-2 gap-x-10 gap-y-2.5 text-sm font-light">
         <li>
           <a
             href="#home"
-            class="hover:text-purple-400 transition-colors duration-300">Home</a
+            class="transition-colors duration-300 hover:text-[#B79A82]"
+            >Início</a
           >
         </li>
         <li>
           <a
             href="#problemas"
-            class="hover:text-purple-400 transition-colors duration-300"
+            class="transition-colors duration-300 hover:text-[#B79A82]"
             >Problemas</a
           >
         </li>
         <li>
           <a
             href="#solucoes"
-            class="hover:text-purple-400 transition-colors duration-300"
+            class="transition-colors duration-300 hover:text-[#B79A82]"
             >Soluções</a
           >
         </li>
         <li>
           <a
             href="#sobre"
-            class="hover:text-purple-400 transition-colors duration-300"
-            >Sobre</a
+            class="transition-colors duration-300 hover:text-[#B79A82]">Sobre</a
           >
         </li>
-        <li class="col-span-2">
+        <li>
           <a
             href="#faq"
-            class="hover:text-purple-400 transition-colors duration-300">FAQ</a
+            class="transition-colors duration-300 hover:text-[#B79A82]">FAQ</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contato"
+            class="transition-colors duration-300 hover:text-[#B79A82]"
+            >Contato</a
           >
         </li>
       </ul>
@@ -64,67 +98,97 @@ import { Icon } from "astro-icon/components";
 
     <!-- Coluna 3: Contato -->
     <div class="space-y-4">
-      <h4 class="text-lg font-semibold uppercase tracking-wider text-slate-500">
+      <h4
+        class="text-sm font-semibold uppercase tracking-[0.15em] text-[#B79A82]"
+      >
         Contato
       </h4>
       <ul class="space-y-3 text-sm font-light">
         <li>
           <a
-            href="mailto:contato@seudominio.com"
-            class="group flex items-center gap-2 hover:text-purple-400 transition-colors duration-300"
+            href="mailto:nutricionistalucianatavares@gmail.com"
+            class="group flex items-center gap-2 text-[#E4D0C5]/80 transition-colors duration-300 hover:text-[#f5eeea]"
           >
-            <!-- Ícone de Envelope/E-mail -->
             <Icon
               name="mdi:email-outline"
-              class="w-5 h-5 group-hover:text-purple-400 transition-colors"
+              class="h-5 w-5 text-[#B79A82] transition-colors group-hover:text-[#f5eeea]"
             />
-            contato@seudominio.com
+            nutricionistalucianatavares@gmail.com
           </a>
         </li>
         <li>
           <a
-            href="https://wa.me"
+            href="https://wa.me/5519997404882"
             target="_blank"
             rel="noopener noreferrer"
-            class="group flex items-center gap-2 hover:text-green-400 transition-colors duration-300"
+            class="group flex items-center gap-2 text-[#E4D0C5]/80 transition-colors duration-300 hover:text-[#f5eeea]"
           >
-            <!-- Ícone de WhatsApp -->
             <Icon
               name="ph:whatsapp-logo"
-              class="w-5 h-5 group-hover:text-green-400 transition-colors"
+              class="h-5 w-5 text-[#B79A82] transition-colors group-hover:text-[#f5eeea]"
             />
-            WhatsApp
+            (19) 9 9740-4882
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=Rua+Bernardino+de+Campos+1221+Piracicaba+SP"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-start gap-2 text-[#E4D0C5]/80 transition-colors duration-300 hover:text-[#f5eeea]"
+          >
+            <Icon
+              name="mdi:map-marker-outline"
+              class="h-5 w-5 shrink-0 text-[#B79A82] transition-colors group-hover:text-[#f5eeea]"
+            />
+
+            R. Bernardino de Campos, 1221, Sala 04, <br /> Bairro Alto, Piracicaba/SP
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/nutri_lutavares/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center gap-2 text-[#E4D0C5]/80 transition-colors duration-300 hover:text-[#f5eeea]"
+          >
+            <Icon
+              name="mdi:instagram"
+              class="h-5 w-5 text-[#B79A82] transition-colors group-hover:text-[#f5eeea]"
+            />
+            @nutri_lutavares
           </a>
         </li>
       </ul>
     </div>
   </div>
 
-  <!-- Bloco Inferior: Direitos e Links Legais -->
-  <div class="w-full pt-6 border-t border-slate-200 mt-10">
+  <!-- Bloco Inferior: Direitos -->
+  <div class="mt-10 w-full border-t border-[#B79A82]/20 pt-6">
     <div
-      class="section-wrapper flex flex-col-reverse gap-4 md:flex-row md:items-center md:justify-between text-xs text-slate-500"
+      class="section-wrapper flex flex-col-reverse gap-4 text-xs text-[#E4D0C5]/50 md:flex-row md:items-center md:justify-center"
     >
-      <p class="font-light text-center md:text-left">
-        &copy; {new Date().getFullYear()} Boilerplate Astro. Todos os direitos reservados.
+      <p class="text-center font-light md:text-left">
+        &copy; {new Date().getFullYear()} Dra. Luciana Lopes Tavares. Todos os direitos
+        reservados.
       </p>
 
-      <ul class="flex flex-wrap justify-center gap-6 font-light">
+      <!-- <ul class="flex flex-wrap justify-center gap-6 font-light">
         <li>
           <a
             href="#"
-            class="hover:text-slate-600 transition-colors duration-300"
+            class="hover:text-[#f5eeea] transition-colors duration-300"
             >Política de Privacidade</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="hover:text-slate-600 transition-colors duration-300"
+            class="hover:text-[#f5eeea] transition-colors duration-300"
             >Termos de Uso</a
           >
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </footer>

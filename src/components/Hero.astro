@@ -1,58 +1,117 @@
 ---
 import CTAButtonMorph from "./CTAButtonMorph";
+import { Icon } from "astro-icon/components";
+import CTAButton from "./Ctabutton.tsx";
 ---
 
 <section id="home" class="hero-section">
   <div class="hero-section-wrapper">
     <div class="w-full lg:max-w-1/2">
-      <span
-        class="px-4 py-2 bg-purple-100 rounded-md font-light text-sm mb-2 inline-block"
-        >Marketing Digital</span
-      >
+      <div class="flex items-end gap 2">
+        <img src="/logo.svg" alt="" class="w-20 h-20 opacity-100" />
 
-      <h1 class="text-6xl">Boilerplate Astro</h1>
+        <!-- <span
+          class="h-9 px-4 py-2 bg-[#E4D0C5]/30 rounded-md font-light text-sm mb-2 inline-block font-didot"
+          >Dra. Luciana Lopes Tavares</span
+        > -->
+      </div>
 
-      <p class="text-base lg:text-xl mb-8">
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+      <h1 class="text-3xl! lg:text-6xl!">
+        Sua saúde merece um cuidado único e sob medida
+      </h1>
+
+      <p class="text-base lg:text-xl font-light mb-8 mt-2">
+        Nutrição clínica, esportiva e fitoterapia com a Dra. Luciana Tavares
+        para transformar sua rotina em Piracicaba.
       </p>
 
-      <CTAButtonMorph
-        client:load
-        size="base"
-        buttonBgColor="#a855f7"
-        bgColor="#a855f7"
-        title="QUERO SER UM MILIONÁRIO!"
-        titleColor="#ffffff"
-        radius="md"
-      >
-        <div class="w-full h-full flex items-center justify-center">
-          <div class="max-w-lg w-full">
-            <p class="text-sm text-white/90">
-              Preencha seu e-mail abaixo e receba o material gratuito.
-            </p>
-            <input
-              type="email"
-              placeholder="seu@email.com"
-              class="mt-3 w-full rounded-lg bg-white/10 px-4 py-2 text-white placeholder:text-white/50 outline-none"
+      <div class="flex flex-col md:max-w-1/2">
+        <div class="flex items-center justify-center gap-4 mb-1">
+          <div class="flex items-center gap-2">
+            <Icon
+              name="ph:airplay"
+              class="w-5 h-5 group-hover:text-green-400 transition-colors"
             />
-            <button
-              class="mt-3 w-full rounded-lg bg-white py-2 text-sm font-medium text-purple-700"
-            >
-              Enviar
-            </button>
+
+            <span class="font-light">Online</span>
+          </div>
+
+          <div class="w-1.25 h-1.25 rounded-full bg-neutral-400"></div>
+
+          <div class="flex items-center gap-2">
+            <Icon
+              name="ph:house"
+              class="w-5 h-5 group-hover:text-green-400 transition-colors"
+            />
+
+            <span class="font-light">Presencial</span>
           </div>
         </div>
-      </CTAButtonMorph>
+
+        <a
+          href="https://api.whatsapp.com/send?l=pt&phone=5519997404882"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex gap-2 items-center justify-center font-normal px-8 py-4 border bg-[#5A2028] text-white rounded-full hover:bg-[#43261F] transition-all hover:duration-300"
+        >
+          <Icon
+            name="ph:whatsapp-logo"
+            class="w-7 h-7 group-hover:text-green-400 transition-colors"
+          />
+          Agende sua consulta
+        </a>
+      </div>
     </div>
 
     <div
-      class="w-full lg:max-w-1/2 flex justify-center img-container rounded-2xl"
+      class="relative w-full lg:max-w-1/2 flex justify-center max-h-80 lg:max-h-150 h-full img-container rounded-2xl"
     >
-      <img
-        src="/public/specialist.webp"
-        alt=""
-        class="w-full h-full aspect-square object-cover rounded-2xl shadow-2xl shadow-purple-500/10 hero-image border border-slate-300"
-      />
+      <!-- Selo: experiência -->
+      <div
+        class="absolute top-1/2 left-0 lg:left-20 z-10 hidden sm:flex items-center gap-3 rounded-2xl border border-[#5A2028]/20 bg-[#f5eeea]/90 px-5 py-4 shadow-lg backdrop-blur-sm"
+      >
+        <span class="font-didot text-3xl text-[#5A2028]">19+</span>
+        <span class="max-w-28 text-xs font-light leading-tight text-[#43261F]">
+          anos de experiência em nutrição
+        </span>
+      </div>
+
+      <!-- Selo: credencial -->
+      <div
+        class="absolute top-60 right-0 lg:right-4 z-10 hidden sm:flex items-center gap-2 rounded-full border border-[#5A2028]/20 bg-[#f5eeea]/90 px-4 py-2 shadow-lg backdrop-blur-sm"
+      >
+        <Icon name="ph:seal-check-fill" class="h-4 w-4 text-[#5A2028]" />
+        <span class="text-xs font-light text-[#43261F]">CRN-3/SP 23457</span>
+      </div>
+
+      <!-- Mobile badges -->
+      <div class="flex lg:hidden items-center gap-3">
+        <div
+          class="flex items-center gap-2 rounded-xl border border-[#5A2028]/20 bg-[#E4D0C5]/90 px-3 py-2 mt-30"
+        >
+          <span class="font-didot text-lg text-[#5A2028]">19+</span>
+          <span class="text-[11px] font-light leading-tight text-[#43261F]">
+            anos de<br />experiência
+          </span>
+        </div>
+
+        <div
+          class="flex items-center gap-1.5 rounded-full border border-[#5A2028]/20 bg-[#E4D0C5]/90 px-3 py-2 mb-20"
+        >
+          <Icon name="ph:seal-check-fill" class="h-3.5 w-3.5 text-[#5A2028]" />
+          <span class="text-[11px] font-light text-[#43261F]"
+            >CRN-3/SP 23457</span
+          >
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-0 lg:left-40 px-10 h-16 bg-[#E4D0C5]/70 backdrop-blur-sm flex w-full lg:w-2/3 items-center justify-center rounded-lg border border-[#5A2028]/20 shadow-lg"
+      >
+        <span class="text-2xl font-didot flex-none text-[#43261F]">
+          Dra. Luciana Lopes Tavares
+        </span>
+      </div>
     </div>
   </div>
 </section>

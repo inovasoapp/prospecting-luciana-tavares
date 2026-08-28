@@ -1,9 +1,38 @@
 ---
 import CommonSectionWrapper from "./CommonSectionWrapper.astro";
+import ProblemsGrid from "./ProblemsGrid";
+import HighlightWord from "./HighlightWord";
 ---
 
-<CommonSectionWrapper id="problemas" class="bg-blue-500/30">
-  <div class="flex w-full items-center justify-center">
-    <h2 class="text-5xl">Seção de problemas</h2>
+<CommonSectionWrapper
+  id="problemas"
+  class="relative overflow-hidden bg-[#f5eeea]"
+>
+  <!-- forma orgânica de fundo, sutil, só pra dar profundidade à transição -->
+  <div
+    class="pointer-events-none absolute -top-24 left-1/2 h-105 w-105 -translate-x-1/2 rounded-full bg-[#B79A82] opacity-[0.12] blur-3xl"
+    aria-hidden="true"
+  >
   </div>
+
+  <div
+    class="relative mx-auto flex max-w-3xl flex-col items-center gap-6 text-center"
+  >
+    <span class="text-sm font-medium uppercase tracking-[0.2em] text-[#B79A82]">
+      Antes de mudar, entenda o que trava você
+    </span>
+
+    <h2 class="text-4xl leading-tight text-[#43261F] md:text-5xl">
+      Se você já tentou de tudo, o problema não é <HighlightWord client:visible
+        >força de vontade</HighlightWord
+      >.
+    </h2>
+
+    <p class="max-w-xl text-lg text-[#43261F]/70">
+      Dietas prontas, aplicativos genéricos e promessas milagrosas ignoram uma
+      coisa simples: seu corpo, sua rotina e seu histórico são únicos.
+    </p>
+  </div>
+
+  <ProblemsGrid client:visible />
 </CommonSectionWrapper>

@@ -1,9 +1,80 @@
 ---
 import CommonSectionWrapper from "./CommonSectionWrapper.astro";
+import AboutTimeline from "./AboutTimeline";
 ---
 
-<CommonSectionWrapper id="sobre" class="">
-  <div class="flex w-full items-center justify-center">
-    <h2 class="text-5xl">Seção Sobre</h2>
+<CommonSectionWrapper id="sobre" class="relative overflow-hidden bg-[#f5eeea]">
+  <div
+    class="pointer-events-none absolute -right-32 top-10 h-90 w-90 rounded-full bg-[#B79A82] opacity-[0.1] blur-3xl"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div
+    class="relative mx-auto grid max-w-6xl gap-16 md:grid-cols-2 md:items-center md:gap-12"
+  >
+    <!-- Coluna de texto -->
+    <div>
+      <span
+        class="text-sm font-medium uppercase tracking-[0.2em] text-[#B79A82]"
+      >
+        Dra. Luciana Tavares
+      </span>
+
+      <h2
+        class="mt-3 flex items-center gap-3 font-serif text-4xl leading-tight text-[#43261F] md:text-5xl"
+      >
+        Quem sou eu
+      </h2>
+
+      <p class="mt-1 text-sm uppercase tracking-widest text-[#43261F]/60">
+        Nutricionista Clínica, Esportiva e Fitoterapeuta
+      </p>
+
+      <p class="mt-6 max-w-md text-xl leading-snug text-[#43261F]">
+        Mais que uma nutricionista, <span class="text-[#5A2028]"
+          >uma mulher que escolheu cuidar de pessoas</span
+        >.
+      </p>
+
+      <div class="mt-10">
+        <AboutTimeline client:visible />
+      </div>
+    </div>
+
+    <!-- Coluna da foto -->
+    <div class="relative mx-auto w-full max-w-md">
+      <div
+        class="pointer-events-none absolute -bottom-6 -left-6 h-[85%] w-[85%] rounded-[3rem] bg-[#E4D0C5]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div
+        class="relative aspect-4/5 w-full overflow-hidden rounded-[3rem] bg-[#43261F]"
+      >
+        <!-- Substituir pela foto real da Dra. Luciana Tavares -->
+        <img
+          src="/dra-luciana-tavares.webp"
+          alt="Dra. Luciana Tavares, nutricionista, sorrindo em seu consultório"
+          class="h-full w-full object-cover object-top"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="absolute -bottom-6 left-1/2 flex w-[85%] -translate-x-1/2 items-center gap-3 rounded-2xl bg-[#f5eeea] px-5 py-4 shadow-[0_8px_30px_rgba(67,38,31,0.15)]"
+      >
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#5A2028] text-sm font-semibold text-[#f5eeea]"
+        >
+          LT
+        </span>
+        <p class="text-xs leading-snug text-[#43261F]">
+          <span class="font-semibold">Dra. Luciana Tavares</span><br />
+          CRN-3/SP 23457
+        </p>
+      </div>
+    </div>
   </div>
 </CommonSectionWrapper>

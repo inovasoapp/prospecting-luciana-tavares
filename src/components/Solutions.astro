@@ -1,9 +1,34 @@
 ---
 import CommonSectionWrapper from "./CommonSectionWrapper.astro";
+import SolutionsSteps from "./SolutionsSteps.tsx";
+import HighlightWord from "./HighlightWord.tsx";
+import SolutionsPackage from "./SolutionsPackage.tsx";
 ---
 
-<CommonSectionWrapper id="solucoes" class="">
-  <div class="flex w-full items-center justify-center">
-    <h2 class="text-5xl">Seção de Soluções</h2>
+<CommonSectionWrapper
+  id="solucoes"
+  class="relative overflow-hidden bg-[#f5eeea]"
+>
+  <div
+    class="relative mx-auto flex max-w-3xl flex-col items-center gap-6 text-center"
+  >
+    <span class="text-sm font-medium uppercase tracking-[0.2em] text-[#B79A82]">
+      Como funciona na prática
+    </span>
+
+    <h2 class="text-4xl leading-tight text-[#43261F] md:text-5xl">
+      Um método construído em 3 etapas, <HighlightWord client:visible
+        >pensado pra durar</HighlightWord
+      >.
+    </h2>
+
+    <p class="max-w-xl text-lg text-[#43261F]/70">
+      Cada etapa existe pra resolver exatamente o que trava resultado de dieta
+      genérica: entender seu corpo, montar um plano sob medida e ajustar com o
+      tempo.
+    </p>
   </div>
+
+  <SolutionsSteps client:visible />
+  <SolutionsPackage client:visible />
 </CommonSectionWrapper>
