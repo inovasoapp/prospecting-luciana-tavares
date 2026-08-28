@@ -114,3 +114,10 @@
     font-size: 2rem;
   }
 }
+
+@media screen and (min-width: 2000px) {
+  .hero-section {
+    background-image: url("/bg-hero-ultrawide.webp");
+    object-fit: contain;
+  }
+}
